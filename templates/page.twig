@@ -1,6 +1,46 @@
 {% extends "base.twig" %}
 
 {% block content %}
+
+    {# <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 header-content">
+            <img src="img/CafeduMarcheLogo1.aff7e564.svg" alt="" class="logo">
+            <div class="link">
+              <a href="#menu">Carte</a>
+              <a href="#info">Infos</a>
+              <a href="#reserver">Réserver</a>
+              <a href="#contacts">Contacts</a>
+              <!-- Début Bouton pour le menu burger -->
+              <button class="menu-toggle" aria-label="Menu Toggle">
+                <img src="img/line.3.horizontal.85d20f47.svg" alt="Menu Toggle">
+              </button>
+              <!-- Fin Bouton pour le menu burger -->
+              <!-- SVG pour le menu déroulant -->
+              <!-- Ajoutez les liens à l'intérieur du menu déroulant -->
+              <div class="menu-dropdown">
+                <div class="linktwo">
+                  <a href="#menu">Carte</a>
+                  <a href="#info">Infos</a>
+                  <a href="#reserver">Réserver</a>
+                  <a href="#contacts">Contacts</a>
+                </div>
+                <!-- Ajoutez l'image de la croix pour fermer le menu déroulant -->
+                <img src="img/croix.afd4eb4d.svg" alt="Menu Dropdown" class="close-button">
+              </div>
+              <!-- SVG pour le menu déroulant -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+	{{post.content}} #}
+
+
+
+
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">

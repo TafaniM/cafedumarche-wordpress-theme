@@ -1,0 +1,277 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {# <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 header-content">
+            <img src="img/CafeduMarcheLogo1.aff7e564.svg" alt="" class="logo">
+            <div class="link">
+              <a href="#menu">Carte</a>
+              <a href="#info">Infos</a>
+              <a href="#reserver">Réserver</a>
+              <a href="#contacts">Contacts</a>
+              <!-- Début Bouton pour le menu burger -->
+              <button class="menu-toggle" aria-label="Menu Toggle">
+                <img src="img/line.3.horizontal.85d20f47.svg" alt="Menu Toggle">
+              </button>
+              <!-- Fin Bouton pour le menu burger -->
+              <!-- SVG pour le menu déroulant -->
+              <!-- Ajoutez les liens à l'intérieur du menu déroulant -->
+              <div class="menu-dropdown">
+                <div class="linktwo">
+                  <a href="#menu">Carte</a>
+                  <a href="#info">Infos</a>
+                  <a href="#reserver">Réserver</a>
+                  <a href="#contacts">Contacts</a>
+                </div>
+                <!-- Ajoutez l'image de la croix pour fermer le menu déroulant -->
+                <img src="img/croix.afd4eb4d.svg" alt="Menu Dropdown" class="close-button">
+              </div>
+              <!-- SVG pour le menu déroulant -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+	{{post.content}} #}
+
+
+      <main>
+      <div class="home">
+        <img src="img/CafeDuMarcheTables.d9f366c1.jpg" alt="" class="background-image">
+        <h1>
+          <div class="title-container">
+            <img src="img/CafeDuMarcheLogo2.cd1c56c6.svg" alt="">
+          </div>
+        </h1>
+      </div>
+
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>
+                Votre Escale Gourmande <br>
+                au Cœur de Fribourg
+              </h2>
+              <p>
+                Bienvenue au Café du Marché! Un havre de convivialité situé au
+                coeur de Fribourg. Notre établissement, à la fois café et
+                restaurant, s'épanouit dans une atmosphère chaleureuse.
+              </p>
+              <a href="#reserver">
+                <div class="button">Réserver une table</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cooking">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-6 order-xl-2">
+              <img src="img/croissants.e4ea1285.jpg" alt="">
+            </div>
+            <div class="col-12 col-xl-6 order-xl-1">
+              <h3>Cuisine Saisonnière et Variée</h3>
+              <p>
+                Une carte éphémère, sur ardoise, changeant au gré des saisons.
+                Un choix de plats végétariens, végétaliens ou de viande vous
+                sera proposé à midi comme le soir.
+              </p>
+              <a href="#menu">
+                <div class="button">Voir la carte de la semaine</div>
+              </a>
+            </div>
+            <div class="col-12 order-xl-3">
+              <div class="carousel-container">
+                <!-- Flèche de gauche pour le carousel -->
+                <div class="carousel-arrow left-arrow">
+                  <img src="img/chevron.left.569f4cd4.svg" alt="Flèche gauche">
+                </div>
+
+                <!-- Carousel d'images -->
+                <div class="carousel">
+                  <img src="img/plats.8d788431.jpg" alt="Image 1">
+                  <img src="img/plats2.560b1675.jpg" alt="Image 2">
+                  <img src="img/plats3.81e33b55.jpg" alt="Image 3">
+                  <!-- Ajoutez plus d'images ici selon vos besoins -->
+                </div>
+
+                <!-- Flèche de droite pour le carousel -->
+                <div class="carousel-arrow right-arrow">
+                  <img src="img/chevron.right.3f61c7a0.svg" alt="Flèche droite">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu" class="menu">
+        <div class="card">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>{{post.title}}</h3>
+                {# <h3>Cette semaine, à midi, nous vous proposons :</h3> #}
+              </div>
+              <div class="col-12">
+                <p>
+                  {{post.content}}
+                  {# Soupe ou Salade du jour <br><br>
+                  ✻ ✻ ✻ ✻ <br><br>
+                  Osso Bucco, Polenta crémeuse & gremolate <br><br>
+                  ou<br>
+                  Lasagne Ratatouille - Feta <br><br>
+                  ou<br>
+                  Curry à l’indienne aux Pois-chiches, Patates douces et
+                  Epinards, Riz Basmati <br><br>
+                  ou<br>
+                  quiche à l’oignon, lentilles en salade <br><br>
+                  ou<br>
+                  Légumes rotis au Pesto de sauge, Polenta crémeuse et Oeuf
+                  mollet #}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>La Sympathique Salle à Manger</h3>
+              <p>
+                Notre établissement dispose d’une salle à manger pouvant être
+                privatisée pour vos apéritifs ou soirées d’entreprise, vos repas
+                de famille ou autres occasions. <br>
+                (Capacité d’accueil : 20 personnes pour un repas à table)
+              </p>
+              <a href="#reserver">
+                <div class="button">Réserver la salle</div>
+              </a>
+              <img src="img/SalleManger.0db8ef87.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>Services</h3>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Vente à emporter <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Options pour Tous les
+                Goûts <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Produits frais
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Cuisine de saison et fait
+                maison <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Terrasse <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Salle à Manger
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <p>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Ambiance Conviviale <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Accueil de petits groupes
+                <br>
+                <img src="img/checkmark.74c59e3a.svg" alt="">Bon cadeau
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="info" class="info">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="infocard">
+                <div class="row">
+                  <div class="col-12">
+                    <h3>Horaires</h3>
+                  </div>
+                  <div class="col-6">
+                    <div class="day">
+                      <p>
+                        Ma <br>
+                        <br>
+                        Me - Je - Ve<br>
+                        Di - Lu
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="hours">
+                      <p>
+                        10h-15h <br>
+                        fermé le soir <br>
+                        10h-22h30<br>
+                        fermé
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="infocard" id="infocard2">
+                <h3>Adresse</h3>
+                <p>
+                  Café du Marché <br>
+                  Rue des Epouses <br>
+                  10 CH - 1700 Fribourg <br><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reserver" class="reserve">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>Réservation</h3>
+              <p>
+                Pour réserver veuillez nous contacter par téléphone au <br>
+                +41 (0)26 565 56 43.
+              </p>
+              <a href="tel:+41265655643">
+                <div class="button">Appeler</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+	{# <div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<h1 class="article-h1">{{post.title}}</h1>
+				<div class="article-body">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper --> #}
+{% endblock %}
