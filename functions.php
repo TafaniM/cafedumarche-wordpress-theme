@@ -66,6 +66,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'cafedumarche_styles' ));
+		add_action( 'wp_enqueue_scripts', array( $this, 'cafedumarche_scripts' ));
 		// add_action( 'wp_enqueue_scripts', array( $this, 'cafedumarche_scripts' ));
 		parent::__construct();
 	}
@@ -99,6 +100,13 @@ class StarterSite extends Timber\Site {
 		wp_enqueue_style( 'creative-cloud-font' );
 		wp_enqueue_style( 'google-fonts' );
 		wp_enqueue_style( 'cafedumarche-styles' );
+	}
+
+	public function cafedumarche_scripts() {
+		// wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
+		wp_register_script( 'cafedumarche-scripts', get_template_directory_uri() . '/js/index.js', array(), '1.0.0', true);
+		// wp_enqueue_script( 'gsap' );
+		wp_enqueue_script( 'cafedumarche-scripts' );
 	}
 
 	public function theme_supports() {
