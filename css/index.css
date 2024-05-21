@@ -5389,7 +5389,7 @@ footer {
 
 @media (width >= 768px) {
   footer {
-    padding: 130px 130px 50px;
+    padding: 50px;
   }
 }
 
@@ -5402,13 +5402,7 @@ footer {
 }
 
 .coordinate p {
-  font-size: 12px;
-}
-
-@media (width >= 767px) {
-  .coordinate p {
-    font-size: 11px;
-  }
+  font-size: 15px;
 }
 
 @media (width >= 1112px) {
@@ -5429,13 +5423,12 @@ footer {
 
 .copyright p {
   margin-top: 70px;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 @media (width >= 768px) {
   .copyright p {
     margin-top: 130px;
-    font-size: 10px;
   }
 }
 
@@ -5457,11 +5450,19 @@ footer {
   margin: 50px 0;
 }
 
-@media (width <= 768px) {
-  .logofooter {
-    width: 25vh;
-  }
+.logofooter {
+  height: 120px;
+}
 
+.icon {
+  height: 30px;
+}
+
+footer .icon {
+  margin-bottom: 10px;
+}
+
+@media (width <= 768px) {
   .line {
     margin: 50px 0 30px;
   }
