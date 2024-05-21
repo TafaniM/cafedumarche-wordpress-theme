@@ -38,52 +38,27 @@ $8973aab45c5aa6ba$var$menuLinks.forEach(function(link) {
 //carousel
 //carousel
 //carousel
-const $8973aab45c5aa6ba$var$carousel = document.querySelector(".carousel");
-const $8973aab45c5aa6ba$var$leftArrow = document.querySelector(".left-arrow");
-const $8973aab45c5aa6ba$var$rightArrow = document.querySelector(".right-arrow");
-let $8973aab45c5aa6ba$var$currentIndex = 0;
-const $8973aab45c5aa6ba$var$totalImages = $8973aab45c5aa6ba$var$carousel.children.length;
-// Fonction pour faire défiler le carousel vers la gauche
-function $8973aab45c5aa6ba$var$scrollLeft() {
-    if ($8973aab45c5aa6ba$var$currentIndex > 0) $8973aab45c5aa6ba$var$currentIndex--;
-    else $8973aab45c5aa6ba$var$currentIndex = $8973aab45c5aa6ba$var$totalImages - 1; // Aller à la dernière image si on est à la première
-    $8973aab45c5aa6ba$var$updateCarousel();
-}
-// Fonction pour faire défiler le carousel vers la droite
-function $8973aab45c5aa6ba$var$scrollRight() {
-    if ($8973aab45c5aa6ba$var$currentIndex < $8973aab45c5aa6ba$var$totalImages - 1) $8973aab45c5aa6ba$var$currentIndex++;
-    else $8973aab45c5aa6ba$var$currentIndex = 0; // Revenir à la première image si on est à la dernière
-    $8973aab45c5aa6ba$var$updateCarousel();
-}
-// Met à jour la position du carousel
-function $8973aab45c5aa6ba$var$updateCarousel() {
-    $8973aab45c5aa6ba$var$carousel.style.transform = `translateX(-${$8973aab45c5aa6ba$var$currentIndex * 100}%)`;
-}
-// Ajoutez des écouteurs d'événements de clic aux flèches
-$8973aab45c5aa6ba$var$leftArrow.addEventListener("click", $8973aab45c5aa6ba$var$scrollLeft);
-$8973aab45c5aa6ba$var$rightArrow.addEventListener("click", $8973aab45c5aa6ba$var$scrollRight);
-// Fonction pour faire défiler le carousel vers la gauche
-function $8973aab45c5aa6ba$var$scrollLeft() {
-    if ($8973aab45c5aa6ba$var$currentIndex > 0) $8973aab45c5aa6ba$var$currentIndex--;
-    else {
-        $8973aab45c5aa6ba$var$currentIndex = $8973aab45c5aa6ba$var$totalImages - 1; // Aller à la dernière image si on est à la première
-        $8973aab45c5aa6ba$var$carousel.style.transition = "none"; // Désactiver la transition pour un mouvement instantané
-        $8973aab45c5aa6ba$var$carousel.style.transform = `translateX(-${$8973aab45c5aa6ba$var$totalImages * 100}%)`; // Faire avancer le carousel d'une longueur d'une image supplémentaire vers la droite
-        setTimeout(()=>{
-            $8973aab45c5aa6ba$var$carousel.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition pour une animation fluide
-            $8973aab45c5aa6ba$var$currentIndex = $8973aab45c5aa6ba$var$totalImages - 1; // Mettre à jour l'index actuel à la dernière image
-            $8973aab45c5aa6ba$var$carousel.style.transform = `translateX(-${$8973aab45c5aa6ba$var$currentIndex * 100}%)`; // Afficher la dernière image
-        }, 0); // Attendre une petite période avant de réactiver la transition
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".carousel img");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    let currentIndex = 0;
+    function showImage(index) {
+        images.forEach((img, i)=>{
+            img.style.display = i === index ? "inline" : "none";
+        });
     }
-} // // Fonction pour faire défiler le carousel vers la droite
- // function scrollRight() {
- //   if (currentIndex < totalImages - 1) {
- //     currentIndex++;
- //   } else {
- //     currentIndex = 0; // Revenir à la première image si on est à la dernière
- //   }
- //   updateCarousel();
- // }
+    prevButton.addEventListener("click", function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+    nextButton.addEventListener("click", function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+    // Initial display
+    showImage(currentIndex);
+});
 
 
 //# sourceMappingURL=index.js.map

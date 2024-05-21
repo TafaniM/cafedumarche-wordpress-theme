@@ -5546,32 +5546,37 @@ footer {
   overflow: hidden;
 }
 
-.carousel-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
 .carousel {
-  display: flex;
+  text-align: center;
+  position: relative;
 }
 
 .carousel img {
   width: 100%;
+  display: none;
 }
 
-.carousel-arrow {
+.carousel img:first-child {
+  display: inline;
+}
+
+.carousel-button {
+  color: #eae0ce;
   cursor: pointer;
+  z-index: 10000;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  font-size: 40px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 60%;
 }
 
-.left-arrow {
+#prevButton {
   left: 10px;
 }
 
-.right-arrow {
+#nextButton {
   right: 10px;
 }
 
