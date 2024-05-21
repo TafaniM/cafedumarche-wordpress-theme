@@ -5055,7 +5055,7 @@ header a:hover {
   height: 50px;
 }
 
-header img, header .menu-toggle img, header .close-button, .header-content .link a img, .header-content .logo {
+header img, header .menu-toggle img, header .close-button, .header-content .link img, .header-content .logo {
   width: auto;
 }
 
@@ -5552,7 +5552,12 @@ footer .icon {
 }
 
 .disable-scroll {
+  height: 100vh;
   overflow: hidden;
+}
+
+.close-button {
+  height: 50px;
 }
 
 .carousel {
