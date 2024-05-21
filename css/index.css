@@ -5560,6 +5560,15 @@ footer .icon {
   height: 50px;
 }
 
+body {
+  overflow-y: auto !important;
+}
+
+.container, .row {
+  height: auto !important;
+  overflow: visible !important;
+}
+
 .carousel {
   text-align: center;
   position: relative;

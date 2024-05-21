@@ -9,34 +9,40 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeButton = document.querySelector(".menu-dropdown .close-button");
     const menuLinks = document.querySelectorAll(".menu-dropdown a");
     const body = document.body;
+    // Vérifie si les éléments sont correctement sélectionnés
     if (!menuToggle || !menuDropdown || !closeButton) {
         console.error("Un ou plusieurs \xe9l\xe9ments n\xe9cessaires n'ont pas \xe9t\xe9 trouv\xe9s.");
         return;
     }
     console.log("Tous les \xe9l\xe9ments n\xe9cessaires ont \xe9t\xe9 trouv\xe9s.");
+    // Vérifie si le menu est actuellement ouvert
     function isMenuOpen() {
         return menuDropdown.style.display === "block";
     }
+    // Fonction pour ouvrir le menu
     function openMenu() {
         console.log("Ouverture du menu");
         menuDropdown.style.display = "block";
         body.classList.add("disable-scroll");
-        console.log("Classe 'disable-scroll' ajout\xe9e au body");
     }
+    // Fonction pour fermer le menu
     function closeMenu() {
         console.log("Fermeture du menu");
         menuDropdown.style.display = "none";
         body.classList.remove("disable-scroll");
-        console.log("Classe 'disable-scroll' retir\xe9e du body");
     }
+    // Ajoute un écouteur d'événements de clic au bouton du menu burger
     menuToggle.addEventListener("click", function() {
         if (isMenuOpen()) closeMenu();
         else openMenu();
     });
+    // Ajoute un écouteur d'événements de clic à l'image de la croix
     closeButton.addEventListener("click", closeMenu);
+    // Parcourir tous les liens et ajouter un gestionnaire d'événements de clic
     menuLinks.forEach(function(link) {
         link.addEventListener("click", closeMenu);
     });
+    // Ferme le menu si l'utilisateur clique en dehors du menu
     menuDropdown.addEventListener("click", function(event) {
         if (event.target === menuDropdown) closeMenu();
     });
