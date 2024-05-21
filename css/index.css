@@ -5051,6 +5051,14 @@ header a:hover {
   margin-left: auto;
 }
 
+.logo {
+  height: 50px;
+}
+
+header img, header .menu-toggle img, header .close-button, .header-content .link a img, .header-content .logo {
+  width: auto;
+}
+
 .home {
   width: 100%;
   position: relative;
@@ -5058,7 +5066,7 @@ header a:hover {
 
 @media (width >= 768px) {
   .home {
-    margin-top: 70px;
+    margin-top: 58px;
   }
 }
 
