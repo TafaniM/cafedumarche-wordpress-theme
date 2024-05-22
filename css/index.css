@@ -5022,7 +5022,7 @@ p {
 }
 
 header {
-  z-index: 1000;
+  z-index: 10000;
   background-color: #2c1315;
   width: 100%;
   padding: 20px 5px;
@@ -5395,7 +5395,7 @@ footer {
   padding: 35px 20px;
 }
 
-@media (width >= 768px) {
+@media (width >= 992px) {
   footer {
     padding: 50px;
   }
@@ -5415,12 +5415,6 @@ footer {
 
 @media (width >= 1112px) {
   .coordinate p {
-    font-size: 14px;
-  }
-}
-
-@media (width >= 1245px) {
-  .coordinate p {
     font-size: 17px;
   }
 }
@@ -5434,7 +5428,7 @@ footer {
   font-size: 12px;
 }
 
-@media (width >= 768px) {
+@media (width >= 992px) {
   .copyright p {
     margin-top: 130px;
   }
@@ -5470,7 +5464,7 @@ footer .icon {
   margin-bottom: 10px;
 }
 
-@media (width <= 768px) {
+@media (width <= 992px) {
   .line {
     margin: 50px 0 30px;
   }
@@ -5586,7 +5580,7 @@ body {
 .carousel-button {
   color: #eae0ce;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1000;
   background: none;
   border: none;
   border-radius: 100%;
