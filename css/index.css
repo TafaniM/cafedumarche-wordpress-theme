@@ -5681,4 +5681,14 @@ body {
   right: 10px;
 }
 
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.home {
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=index.css.map */

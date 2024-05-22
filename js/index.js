@@ -72,6 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initial display
     showImage(currentIndex);
 });
+//parallax
+//parallax
+//parallax
+//parallax
+document.addEventListener("scroll", function() {
+    const parallax = document.querySelector(".home .background-image");
+    let scrollPosition = window.pageYOffset;
+    parallax.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
+});
 
 
 //# sourceMappingURL=index.js.map
