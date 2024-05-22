@@ -5399,6 +5399,22 @@ h2 {
   }
 }
 
+.infolineone {
+  background-color: #eae0ce;
+  align-items: center;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 40%;
+}
+
+.infolinetwo {
+  background-color: #eae0ce;
+  align-items: center;
+  width: 100%;
+  height: 1px;
+  margin-top: 40%;
+}
+
 .reserve {
   color: #2c1315;
   text-align: center;
