@@ -5066,13 +5066,13 @@ header img, header .menu-toggle img, header .close-button, .header-content .link
 
 @media (width >= 768px) {
   .home {
-    margin-top: 43px;
+    margin-top: 90px;
   }
 }
 
-@media (width >= 783px) {
+@media (width >= 1200px) {
   .home {
-    margin-top: 58px;
+    margin-top: 65px;
   }
 }
 
@@ -5219,17 +5219,17 @@ h2 {
 
 @media (width >= 768px) {
   .cooking {
-    padding: 75px;
+    padding: 70px;
   }
 }
 
 .cooking h3 {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 @media (width >= 768px) {
   .cooking h3 {
-    margin-top: 175px;
+    margin-top: 15%;
   }
 }
 
@@ -5243,6 +5243,20 @@ h2 {
 
 .cooking .button:hover {
   background-color: #720004;
+}
+
+.cookingline {
+  background-color: #eae0ce;
+  align-items: center;
+  width: 100%;
+  height: 1px;
+  margin-top: 30%;
+}
+
+@media (width >= 1400px) {
+  .cookingline {
+    margin-top: 45%;
+  }
 }
 
 .menu {
