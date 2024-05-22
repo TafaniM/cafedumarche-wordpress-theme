@@ -1,0 +1,7 @@
+<div class="carousel">
+    <button id="prevButton" class="carousel-button">&lt;</button>
+    {% for image in images %}
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
+    {% endfor %}
+    <button id="nextButton" class="carousel-button">&gt;</button>
+</div>

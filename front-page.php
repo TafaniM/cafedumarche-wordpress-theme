@@ -11,41 +11,20 @@
 
 $context = Timber::context();
 
-// Récupérer les images associées à la taxonomie 'recipe'
-$args = array(
-    'post_type'      => 'attachment',
-    'post_status'    => 'inherit',
-    'posts_per_page' => -1,
-    'tax_query'      => array(
-        array(
-            'taxonomy' => 'recipe',
-            'field'    => 'slug',
-            'terms'    => 'recipe',
-        ),
-    ),
-);
+$timber_post     = new Timber\Post();
+$context['post'] = $timber_post;
 
-$images_query = new WP_Query( $args );
+// Vérifier si la page actuelle est la page d'accueil
+$context['is_front_page'] = is_front_page();
 
-$images = array();
+// Si c'est la page d'accueil, récupérer le contenu du carousel
+if ($context['is_front_page']) {
+    ob_start();
+    include 'carousel.php'; // Inclure le fichier carousel.php
+    $carousel_output = ob_get_clean();
 
-if ( $images_query->have_posts() ) {
-    while ( $images_query->have_posts() ) {
-        $images_query->the_post();
-        $images[] = array(
-            'url'  => wp_get_attachment_url(),
-            'alt'  => get_post_meta( get_the_ID(), '_wp_attachment_image_alt', true ),
-        );
-    }
+    $context['carousel_output'] = $carousel_output;
 }
 
-$context['images'] = $images;
-
-// Récupérer les données du post principal (front page)
-$front_page_post = new Timber\Post();
-
-// Ajouter les données du post principal au contexte
-$context['front_page_post'] = $front_page_post;
-
 // Rendre le template front-page.twig
-Timber::render( 'front-page.twig', $context );
+Timber::render('front-page.twig', $context);

@@ -89,13 +89,19 @@
             </div>
             <div class="col-12 order-xl-3">
               <!-- Carousel d'images -->
-            <div class="carousel">
-                <button id="prevButton" class="carousel-button">&lt;</button>
-                {% for image in images %}
-                    <img src="{{ image.url }}" alt="{{ image.alt }}">
-                {% endfor %}
-                <button id="nextButton" class="carousel-button">&gt;</button>
-            </div>
+{# Autres éléments de la page front-page.twig #}
+
+{% block carousel %}
+    {% if carousel_output is defined %}
+        {{ carousel_output|raw }}
+    {% endif %}
+{% endblock %}
+
+{# Autres éléments de la page front-page.twig #}
+
+
+
+
             </div>
           </div>
         </div>
@@ -107,19 +113,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>{{ front_page_post.title }}</h3>
+                    <h3>{{ post.title }}</h3>
                     {# <h3>Cette semaine, à midi, nous vous proposons :</h3> #}
                 </div>
                 <div class="col-12">
                     <p>
-                        {{ front_page_post.content }}
+                        {{ post.content }}
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
       <div class="room">
         <div class="container">
