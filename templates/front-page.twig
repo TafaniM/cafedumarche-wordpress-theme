@@ -89,42 +89,49 @@
             </div>
             <div class="col-12 order-xl-3">
               <!-- Carousel d'images -->
-{# Autres éléments de la page front-page.twig #}
-
-{% block carousel %}
-    {% if carousel_output is defined %}
-        {{ carousel_output|raw }}
-    {% endif %}
-{% endblock %}
-
-{# Autres éléments de la page front-page.twig #}
-
-
-
-
+              <div class="carousel">
+                <button id="prevButton" class="carousel-button">&lt;</button>
+                  <img src="http://localhost/wp_cafedumarche/wordpress/wp-content/uploads/2024/05/plats.jpg" alt="Image 1">
+                  <img src="http://localhost/wp_cafedumarche/wordpress/wp-content/uploads/2024/05/plats2.jpg" alt="Image 2">
+                  <img src="http://localhost/wp_cafedumarche/wordpress/wp-content/uploads/2024/05/plats3.jpg" alt="Image 3">
+                <button id="nextButton" class="carousel-button">&gt;</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
 
-<div id="menu" class="menu">
-    <div class="card">
-        <div class="container">
+      <div id="menu" class="menu">
+        <div class="card">
+          <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h3>{{ post.title }}</h3>
-                    {# <h3>Cette semaine, à midi, nous vous proposons :</h3> #}
-                </div>
-                <div class="col-12">
-                    <p>
-                        {{ post.content }}
-                    </p>
-                </div>
+              <div class="col-12">
+                <h3>{{post.title}}</h3>
+                {# <h3>Cette semaine, à midi, nous vous proposons :</h3> #}
+              </div>
+              <div class="col-12">
+                <p>
+                  {{post.content}}
+                  {# Soupe ou Salade du jour <br><br>
+                  ✻ ✻ ✻ ✻ <br><br>
+                  Osso Bucco, Polenta crémeuse & gremolate <br><br>
+                  ou<br>
+                  Lasagne Ratatouille - Feta <br><br>
+                  ou<br>
+                  Curry à l’indienne aux Pois-chiches, Patates douces et
+                  Epinards, Riz Basmati <br><br>
+                  ou<br>
+                  quiche à l’oignon, lentilles en salade <br><br>
+                  ou<br>
+                  Légumes rotis au Pesto de sauge, Polenta crémeuse et Oeuf
+                  mollet #}
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
       <div class="room">
         <div class="container">
