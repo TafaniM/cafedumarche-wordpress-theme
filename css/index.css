@@ -5064,7 +5064,7 @@ header img, header .menu-toggle img, header .close-button, .header-content .link
   position: relative;
 }
 
-@media (width >= 768px) {
+@media (width >= 782px) {
   .home {
     margin-top: 58px;
   }
