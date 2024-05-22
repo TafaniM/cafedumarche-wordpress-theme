@@ -5064,9 +5064,15 @@ header img, header .menu-toggle img, header .close-button, .header-content .link
   position: relative;
 }
 
-@media (width >= 782px) {
+@media (width >= 768px) {
   .home {
-    margin-top: 58px;
+    margin-top: 95px;
+  }
+}
+
+@media (width >= 1200px) {
+  .home {
+    margin-top: 65px;
   }
 }
 
