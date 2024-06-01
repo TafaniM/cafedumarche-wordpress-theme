@@ -56,21 +56,30 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
     let currentIndex = 0;
+    let interval;
     function showImage(index) {
         images.forEach((img, i)=>{
             img.style.display = i === index ? "inline" : "none";
         });
+        resetInterval();
     }
-    prevButton.addEventListener("click", function() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    });
-    nextButton.addEventListener("click", function() {
+    function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(nextImage, 4000); // Change image every 3 seconds
+    }
+    function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
-    });
-    // Initial display
+    }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+    prevButton.addEventListener("click", prevImage);
+    nextButton.addEventListener("click", nextImage);
+    // Initial display and start auto-scroll
     showImage(currentIndex);
+    interval = setInterval(nextImage, 3000);
 });
 //parallax
 //parallax
